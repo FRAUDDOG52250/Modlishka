@@ -3,11 +3,17 @@
 Modlishka is a powerful and flexible HTTP reverse proxy. It implements an entirely new and interesting approach of handling browser-based HTTP traffic flow, which allows to transparently proxy multi-domain destination traffic, both TLS and non-TLS, over a single domain, without a requirement of installing any additional certificate on the client. What does this exactly mean? In short, it simply has a lot of potential, that can be used in many use case scenarios...
 
 From the security perspective, Modlishka can be currently used to:
+<<<<<<< HEAD
 -	 Support ethical phishing penetration tests with a transparent and automated reverse proxy component that has a universal 2FA “bypass” support.
 -  Automatically poison HTTP 301 browsers cache and permanently hijack non-TLS URLS.
 -  Diagnose and hijack browser-based applications HTTP traffic from the "Client Domain Hooking" attack perspective.
 -  Wrap legacy websites with TLS layer, confuse crawler bots and automated scanners, etc.
 -  TBC
+=======
+-	Help penetration testers to carry out a modern ethical phishing campaign that requires a universal 2FA “bypass” support.
+-   Hijack application HTTP TLS traffic flow and perform a HTTP 301 Cache poisoning attack.
+-   TBC
+>>>>>>> parent of 10d19cb (Updated README.md + TODO file)
 
 Modlishka was written as an attempt overcome standard reverse proxy limitations and as a personal challenge to see what is possible with sufficient motivation and a bit of extra research time. 
 The achieved results appeared to be very interesting and the tool was initially released and later updated with aim to:
@@ -34,10 +40,18 @@ Some of the most important 'Modlishka' features :
 -   Striping websites from all encryption and security headers (back to 90's MITM style). 
 -   Stateless design. Can be scaled up easily to handle an arbitrary amount of traffic  - e.g. through a DNS load balancer.
 -   Can be extended easily with your ideas through modular plugins.
+<<<<<<< HEAD
 -   Automatic test TLS certificate generation plugin for the proxy domain (requires a self-signed CA certificate)
 -   Written in Go, so it works basically on all platforms and architectures: Windows, OSX, Linux, BSD supported...
 
 **Security related:**
+=======
+-   Automatic TLS certificate generation plugin for the proxy domain (requires a self-signed CA certificate)
+-   Written in Go, so it works basically on all platforms: Windows, Linux, BSD, ARM supported...
+
+**Security related:**
+- "[Client Domain Hooking](https://blog.duszynski.eu/hijacking-browser-tls-traffic-through-client-domain-hooking/)" attack in form of a diagnostic module.
+>>>>>>> parent of 10d19cb (Updated README.md + TODO file)
 -  Support for majority of 2FA authentication schemes (out of the box).
 -   Practical implementation of the "[Client Domain Hooking](https://blog.duszynski.eu/client-domain-hooking-in-practice/)" attack. Supported with a diagnostic plugin.
 -  User credential harvesting (with context based on URL parameter passed identifiers).
